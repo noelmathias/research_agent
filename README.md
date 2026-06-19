@@ -123,7 +123,9 @@ Planner ──> Retriever ──> Summarizer ──> Evaluator ──> Reflectio
 ```text
 research_agent/
 │
-├── backend/                  # FastAPI Application Core
+├── assets/                   # Architecture diagrams and documentation assets
+│
+├── backend/                  # FastAPI Application Core & LangGraph Orchestrator
 │   ├── agents/               # Individual Agent LLM Prompts & Logic
 │   ├── api/                  # REST Router Endpoints
 │   ├── graph/                # LangGraph State Machine Definition
@@ -137,16 +139,20 @@ research_agent/
 │   ├── pages/                # Streamlit Multi-page Routing
 │   └── utils/                # API Handlers & Formatting Helpers
 │
-├── shared/                   # Shared Schemas & Common Type Interfaces
+├── shared/                   # Shared Pydantic schemas & common type interfaces
+├── tests/                    # Unit and integration test suites
 │
-├── data/                     # Local Storage Data Mounts
+├── data/                     # Local Storage Data Mounts (Git-ignored)
 │   ├── uploads/              # Raw File Ingestion Target
 │   ├── reports/              # Final Compiled Markdown Outputs
 │   └── vectorstore/          # Persistent ChromaDB Database Files
 │
 ├── logs/                     # System & Execution Log Traces
 │
-├── docker-compose.yml        # Multi-Container Compose Manifest
-├── requirements.txt          # Python Production Dependencies
-└── README.md                 # Project Documentation
+├── .dockerignore             # Excluded files from Docker builds
+├── .env.example              # Template configuration for environment variables
+├── .gitignore                # Files and directories ignored by Git
+├── docker-compose.yml        # Multi-container multi-service Docker manifest
+├── requirements.txt          # Core Python production dependencies
+└── README.md                 # Project presentation documentation
 ```
