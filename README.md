@@ -185,3 +185,10 @@ Planned improvements for scalability, reliability, and enterprise adoption:
 * **Agent Memory & Knowledge Persistence:** Introduce long-term memory mechanisms to retain research context across sessions and enable iterative knowledge accumulation.
 * **Human-in-the-Loop Review:** Add approval checkpoints allowing users to validate retrieval results and generated reports before final publication.
 * **Advanced Citation Grounding:** Implement fine-grained sentence-level citation attribution and source verification for improved transparency and trustworthiness.
+
+## 👤 Author
+
+* **Name:** Noel Mathias
+* **GitHub:** [@yourusername](https://github.com/yourusername)
+* **LinkedIn:** [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
+* **Email:** noelmathias10@gmail.com
