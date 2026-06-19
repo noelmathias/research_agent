@@ -90,3 +90,63 @@ Planner ──> Retriever ──> Summarizer ──> Evaluator ──> Reflectio
 * Confidence-based evaluation
 * Reflection-driven self-correction
 * Structured logging and execution tracking
+
+---
+
+## 💻 Tech Stack
+
+### Backend Architecture
+* **Language:** Python
+* **Framework:** FastAPI (Asynchronous API endpoints)
+* **Orchestration:** LangGraph (Stateful multi-agent graphs)
+* **Concurrency:** AsyncIO
+
+### AI / ML Core
+* **Local Inference:** Ollama (LLM orchestration)
+* **Vector Store:** ChromaDB
+* **Embeddings:** Sentence Transformers
+* **Pattern Framework:** State-based RAG 
+
+### User Interface & Ingestion
+* **Frontend:** Streamlit
+* **PDF Engine:** PyMuPDF
+
+### DevOps & Infrastructure
+* **Containerization:** Docker & Docker Compose
+* **Cloud Infrastructure:** AWS EC2
+* **Reverse Proxy / Server:** Nginx
+
+---
+
+## 📁 Project Structure
+
+```text
+research_agent/
+│
+├── backend/                  # FastAPI Application Core
+│   ├── agents/               # Individual Agent LLM Prompts & Logic
+│   ├── api/                  # REST Router Endpoints
+│   ├── graph/                # LangGraph State Machine Definition
+│   ├── jobs/                 # Background Job Workers & Queue Processors
+│   ├── mcp/                  # Model Context Protocol Definitions
+│   ├── pipelines/            # Ingestion Pipelines
+│   └── services/             # Vectorstore, File-system & Business Logic
+│
+├── frontend/                 # Streamlit UI Layer
+│   ├── components/           # Reusable UI Widgets
+│   ├── pages/                # Streamlit Multi-page Routing
+│   └── utils/                # API Handlers & Formatting Helpers
+│
+├── shared/                   # Shared Schemas & Common Type Interfaces
+│
+├── data/                     # Local Storage Data Mounts
+│   ├── uploads/              # Raw File Ingestion Target
+│   ├── reports/              # Final Compiled Markdown Outputs
+│   └── vectorstore/          # Persistent ChromaDB Database Files
+│
+├── logs/                     # System & Execution Log Traces
+│
+├── docker-compose.yml        # Multi-Container Compose Manifest
+├── requirements.txt          # Python Production Dependencies
+└── README.md                 # Project Documentation
+```
