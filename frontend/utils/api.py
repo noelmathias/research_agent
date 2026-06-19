@@ -1,8 +1,11 @@
+import os
 import httpx
 import json
 from typing import Any, Dict, Optional, List
 
-API_BASE = "http://localhost:8000/api/v1"
+_DEFAULT_BACKEND_URL = "http://localhost" + ":8000"
+_BACKEND_URL = os.environ.get("BACKEND_URL", _DEFAULT_BACKEND_URL)
+API_BASE = f"{_BACKEND_URL}/api/v1"
 DEFAULT_TIMEOUT = 600
 
 

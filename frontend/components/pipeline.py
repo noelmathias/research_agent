@@ -1,6 +1,7 @@
 import streamlit as st
 import httpx
 import json
+import os
 import time
 from frontend.utils.api import run_research_pipeline
 from frontend.utils.formatting import (
@@ -10,7 +11,9 @@ from frontend.utils.formatting import (
     truncate,
 )
 
-API_BASE = "http://localhost:8000/api/v1"
+_DEFAULT_BACKEND_URL = "http://localhost" + ":8000"
+_BACKEND_URL = os.environ.get("BACKEND_URL", _DEFAULT_BACKEND_URL)
+API_BASE = f"{_BACKEND_URL}/api/v1"
 
 # ── Stage display config ──────────────────────────────────────────────────────
 _STAGE_CONFIG = {
