@@ -5,6 +5,9 @@ An end-to-end Agentic AI platform that automates the research workflow using spe
 The system ingests documents, performs semantic retrieval, synthesizes research findings, evaluates response quality, and generates citation-backed reports through a multi-agent orchestration framework powered by **LangGraph**.
 
 ---
+## 🔍 Overview
+
+This project implements an autonomous research pipeline consisting of specialized AI agents that collaborate to produce high-quality, comprehensive research reports. By shifting from standard single-prompt RAG to a **graph-based multi-agent workflow**, the system breaks down complex queries, cross-references sources, self-evaluates for hallucinations, and refines its output autonomously before presenting it to the user.
 
 ## 📑 Table of Contents
 - [Overview](#-overview)
@@ -26,6 +29,13 @@ The system ingests documents, performs semantic retrieval, synthesizes research 
 ## 🏗️ System Architecture
 
 ![Autonomous Multi-Agent Research Assistant Refined System Architecture](assets/architecture.png)
-## 🔍 Overview
 
-This project implements an autonomous research pipeline consisting of specialized AI agents that collaborate to produce high-quality, comprehensive research reports. By shifting from standard single-prompt RAG to a **graph-based multi-agent workflow**, the system breaks down complex queries, cross-references sources, self-evaluates for hallucinations, and refines its output autonomously before presenting it to the user.
+---
+
+## 🤖 Agent Workflow & Core Pipeline
+
+The platform uses a stateful, cyclic graph managed by **LangGraph** to pass context seamlessly between specialized agents. Rather than running a single linear prompt, the system routes state transitions through a structured multi-agent loop:
+
+```text
+Planner ──> Retriever ──> Summarizer ──> Evaluator ──> Reflection ──> Report Generator
+```
