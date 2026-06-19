@@ -189,6 +189,6 @@ Planned improvements for scalability, reliability, and enterprise adoption:
 ## 👤 Author
 
 * **Name:** Noel Mathias
-* **GitHub:** [@yourusername](https://github.com/yourusername)
+* **GitHub:** [@yourusername](https://github.com/noelmathias)
 * **LinkedIn:** [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
 * **Email:** noelmathias10@gmail.com
