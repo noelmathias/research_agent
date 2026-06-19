@@ -39,3 +39,54 @@ The platform uses a stateful, cyclic graph managed by **LangGraph** to pass cont
 ```text
 Planner ──> Retriever ──> Summarizer ──> Evaluator ──> Reflection ──> Report Generator
 ```
+---
+
+## 📋 Agent Responsibilities (The 6-Stage Deep Dive)
+
+1. **1. Planner Agent**
+   * Decomposes user queries into structured research objectives.
+   * Generates a research plan and retrieval strategy.
+
+2. **2. Retriever Agent**
+   * Performs semantic search over ChromaDB.
+   * Retrieves the most relevant context and source metadata.
+
+3. **3. Summarizer Agent**
+   * Synthesizes retrieved information into a coherent draft.
+   * Preserves source grounding and citations.
+
+4. **4. Evaluator Agent**
+   * Assesses factual consistency and response quality.
+   * Produces confidence scores and validation feedback.
+
+5. **5. Reflection Agent**
+   * Uses evaluator feedback to identify missing context.
+   * Triggers retrieval retries and plan refinement when needed.
+
+6. **6. Report Agent**
+   * Generates the final citation-backed research report.
+   * Formats outputs into publication-ready Markdown.
+
+---
+
+## ✨ Key Features
+
+### 🤝 Multi-Agent Orchestration
+* LangGraph-based stateful execution
+* Conditional routing and reflection loops
+* Structured agent-to-agent state transitions
+
+### 📚 Retrieval-Augmented Generation (RAG)
+* ChromaDB vector storage
+* Semantic similarity search
+* Citation-aware response generation
+
+### 📄 Document Processing
+* PDF ingestion with PyMuPDF
+* Metadata-aware chunking and indexing
+* Persistent vector storage
+
+### 🛠️ Reliability & Monitoring
+* Confidence-based evaluation
+* Reflection-driven self-correction
+* Structured logging and execution tracking
