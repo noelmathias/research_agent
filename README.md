@@ -168,3 +168,20 @@ The Autonomous Multi-Agent Research Assistant is designed to streamline dense kn
 * **Technical Document Analysis:** Dissecting lengthy technical manuals, engineering specs, architectural configurations, and vendor requests for proposals (RFPs).
 * **Enterprise Knowledge Management:** Acting as a private semantic search engine over proprietary internal data clusters (e.g., policy booklets, product documentations, and team logs).
 * **AI-Powered Report Generation:** Turning unstructured, chaotic document raw-dumps into pristine, beautifully structured, publication-ready research updates on demand.
+
+
+---
+
+## 🔮 Future Enhancements
+
+Planned improvements for scalability, reliability, and enterprise adoption:
+
+* **Authentication & RBAC:** Integrate OAuth2/JWT-based authentication with role-based access control (RBAC) for secure multi-user access and data isolation.
+* **Hybrid Retrieval:** Combine semantic vector search (ChromaDB) with keyword-based retrieval (BM25) to improve search precision and recall.
+* **Cloud-Native Vector Storage:** Migrate from local vector persistence to managed vector databases such as Pinecone, Milvus, or AWS OpenSearch for large-scale document collections.
+* **Real-Time Streaming:** Implement Server-Sent Events (SSE) or WebSockets to stream agent outputs and intermediate execution states directly to the frontend.
+* **Observability & Monitoring:** Integrate OpenTelemetry, Prometheus, Grafana, and LangSmith for end-to-end tracing, performance monitoring, token usage analytics, and agent execution insights.
+* **Multi-Model Orchestration:** Dynamically route tasks between local and cloud LLMs based on latency, cost, and reasoning requirements.
+* **Agent Memory & Knowledge Persistence:** Introduce long-term memory mechanisms to retain research context across sessions and enable iterative knowledge accumulation.
+* **Human-in-the-Loop Review:** Add approval checkpoints allowing users to validate retrieval results and generated reports before final publication.
+* **Advanced Citation Grounding:** Implement fine-grained sentence-level citation attribution and source verification for improved transparency and trustworthiness.
