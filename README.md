@@ -23,7 +23,9 @@ The system ingests documents, performs semantic retrieval, synthesizes research 
 - [👤 Author](#-author)
 
 ---
+## 🏗️ System Architecture
 
+![Autonomous Multi-Agent Research Assistant Refined System Architecture](assets/architecture.png)
 ## 🔍 Overview
 
 This project implements an autonomous research pipeline consisting of specialized AI agents that collaborate to produce high-quality, comprehensive research reports. By shifting from standard single-prompt RAG to a **graph-based multi-agent workflow**, the system breaks down complex queries, cross-references sources, self-evaluates for hallucinations, and refines its output autonomously before presenting it to the user.
